@@ -24,6 +24,10 @@ $(function () {
 		"assets/img/background/2.jpg",
 		"assets/img/background/3.jpg"
 	], {duration: 3800, fade: 1500});
+
+	particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+		console.log('callback - particles.js config loaded');
+	});
 	
 	
 	/* ---------------------------------------------------------
