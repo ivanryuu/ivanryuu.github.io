@@ -24,11 +24,6 @@ $(function () {
 		"assets/img/background/2.jpg",
 		"assets/img/background/3.jpg"
 	], {duration: 3800, fade: 1500});
-
-	particlesJS.load('particles-js', 'assets/js/particles.json', function() {
-		console.log('callback - particles.js config loaded');
-	});
-	
 	
 	/* ---------------------------------------------------------
 	 *	WOW
@@ -132,38 +127,6 @@ $(function () {
 		}
 		else{
 			$(icon).removeClass("fa-plus").addClass("fa-minus");
-		}
-	});
-	
-	
-	/* ---------------------------------------------------------
-	 *	Twitter
-	 */
-	
-	twitterFetcher.fetch({
-	  "id": '345170787868762112',
-	  "domId": '',
-	  "maxTweets": 3,
-	  "enableLinks": true,
-	  "showInteraction": false,
-	  "showUser": false,
-	  "customCallback": function handleTweets(tweets){
-			var x = tweets.length,
-				n = 0,
-				tweetsHtml = '<ul class="twitterFeed">';
-				
-			while(n < x) {
-				tweetsHtml += '<li>' + tweets[n] + '</li>';
-				n++;
-			}
-			
-			tweetsHtml += '</ul>';
-			$('#twitterFeed').html(tweetsHtml);
-			
-			$(".twitterFeed").bxSlider({
-				nextText: "",
-				prevText: ""
-			});
 		}
 	});
 	
